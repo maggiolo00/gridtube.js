@@ -1,0 +1,44 @@
+
+
+
+.search-dialog {
+	width : 400px;
+	height : 20px;
+    margin-top :  200px;
+
+}
+
+
+
+.video-element {
+	float: left;
+    margin: 10px;
+    
+}
+.video-title {
+	overflow : hidden;
+	position : absolute;
+}
+.video-title a {
+ 	display: block;
+	overflow: hidden; 
+	color: black;
+    font-size: 13px;
+    max-height: 29px;
+    overflow: hidden;
+    padding: 4px 0 1px;
+    text-decoration: none;
+}
+.video-element img {
+  	height: 75px;
+    width: 101px;
+	border: 2px solid #00BFF3;
+}
+.video-element img:hover {
+	cursor : pointer;
+}
+.video-container {
+ 	list-style: none; 
+ 	overflow: hidden; 
+	margin: auto;
+}

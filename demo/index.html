@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<meta  charset="utf-8"  />
+<head>
+  <title>We're sorry, but something went wrong (500)</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="../gridtube.js" ></script>
+  <script type="text/javascript" src="jquery.fancybox-1.3.4.pack.js"></script>
+  <link rel="stylesheet" type="text/css" href="jquery.fancybox-1.3.4.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../css/gridtube.css" media="screen" />
+  <script type="text/javascript">
+  	
+  	function preview(obj){
+		$.fancybox({
+				'padding': 0,
+				'autoScale': false,
+				'transitionIn': 'none',
+				'transitionOut': 'none',
+				'title': obj.title,
+				'width': 640,
+				'height': 385,
+				'href': obj.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+				'type': 'swf',
+				'swf': {
+					'wmode': 'transparent',
+					'allowfullscreen': 'true'
+				}
+			});
+	}
+	function init(){
+		$('#search-dialog').gridtube({element : 'resultSet' ,destination : 'search-dialog',selected: function(obj){}, preview : preview});
+	}
+  </script>
+  <style type="text/css">
+    
+  </style>
+</head>
+
+<body onload="init()">
+  <input id = "search-dialog" type="text" class="search-dialog" />
+  <div id="resultSet" ></div>
+</body>
+</html>
